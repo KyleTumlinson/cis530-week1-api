@@ -14,12 +14,17 @@ import java.util.LinkedHashMap;
 @RestController
 @Component
 public class HelloController {
+
+    // A controller mapping for a hello message mapped to localhost:8080/api/hello
     @GetMapping("/api/hello")
     public String sayHello()
     {
         return "Hello Welcome to my first API";
     }
 
+    /* A controller mapping for mapping object retrieval mapped to localhost:8080/api/info
+        This gets a very simple set of information in a json format
+     */
     @GetMapping("/api/info")
     public Map<String, Object> info()
     {
